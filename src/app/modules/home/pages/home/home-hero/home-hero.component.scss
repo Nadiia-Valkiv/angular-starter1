@@ -1,4 +1,120 @@
 @import 'bootstrap/scss/mixins';
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../../../../assets/img/icons/background.svg');
+  background-size: cover;
+}
 
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.main-header {
+  width: 769px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 56px;
+}
+
+.presentation-btn {
+  width: 203.25px;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 16px 34px;
+  border-radius: 48px;
+  border: 2px solid;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation-btn:hover {
+  @media screen and (min-width: 1024px) {
+    background-color: #fcb36c;
+    border: solid 2px #fcb36c;
+  }
+}
+
+.btn-icon {
+  margin-right: 10px;
+}
+
+.video-btn {
+  width: 241px;
+  height: 56px;
+  padding: 16px 34px;
+  border-radius: 48px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-btn:hover {
+  @media screen and (min-width: 1024px) {
+    background-color: #6b3504;
+    border: solid 2px #361b02;
+  }
+}
+
+.flex-container-center {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@include media-breakpoint-down(md) {
+  .main-header {
+    width: unset;
+    font-size: 48px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .logo {
+    width: 108px;
+    height: 26px;
+  }
+
+  .main-header {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .presentation-btn {
+    width: 160px;
+    height: 32px;
+    font-size: 13px;
+    padding: 4px 24px;
+    border: 1px solid;
+  }
+
+  .btn-icon {
+    width: 10px;
+    height: 12px;
+  }
+
+  .video-btn {
+    width: 211px;
+    height: 48px;
+    font-size: 13px;
+  }
+
+  .flex-container-center {
+    padding: 0 21px;
+  }
+}

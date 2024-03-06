@@ -1,3 +1,66 @@
 @import 'bootstrap/scss/mixins';
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+  padding: 50px 135px;
+}
+
+.number-of-lists {
+  padding: 10px 23px;
+  background-color: #f4f4f4;
+  border-radius: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.first-header {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43.17px;
+  margin-top: 24px;
+}
+
+.newsItem {
+  font-size: 18px;
+  line-height: 27px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .flex-container {
+    padding: 50px 70px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .flex-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .flex-item {
+    width: 100%;
+  }
+
+  .first-header {
+    font-size: 24px;
+    line-height: 28.78px;
+  }
+
+  .newsItem {
+    font-size: 14px;
+    line-height: 16.79px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 18px;
+    }
+  }
+}
