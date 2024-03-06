@@ -1,0 +1,65 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.flex-item {
+  max-width: 300px;
+}
+
+
+.img-wrapper {
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.contacts-text {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  transition: color 0.3s ease-in-out;
+}
+
+.link-text:hover {
+  color: blue;
+  }
+
+
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 22px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.5;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
