@@ -10,10 +10,11 @@ import { HomeHeroComponent } from 'src/app/modules/home/pages/home/home-hero/hom
 import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
 import { HomeProjectsComponent } from './pages/home/home-projects/home-projects.component';
 import { LiveVideoStreamComponent } from './pages/home/live-video-stream/live-video-stream.component';
-import { AntiCorruptionContactsComponent } from './pages/home/anti-corruption-contacts/anti-corruption-contacts.component'
+import { AntiCorruptionContactsComponent } from './pages/home/anti-corruption-contacts/anti-corruption-contacts.component';
+import { WeekNewsComponent } from './pages/home/week-news/week-news.component'
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeroComponent, HomeProjectsComponent, LiveVideoStreamComponent, AntiCorruptionContactsComponent],
+  declarations: [HomeComponent, HomeHeroComponent, HomeProjectsComponent, LiveVideoStreamComponent, AntiCorruptionContactsComponent, WeekNewsComponent],
   imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule],
 })
 export class HomeModule {}

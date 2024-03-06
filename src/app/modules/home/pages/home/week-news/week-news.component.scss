@@ -1,0 +1,47 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.background {
+  background-color: #FFCD4E;
+}
+
+
+.flex-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-left: 65px;
+}
+
+.flex-item {
+  max-width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.agreement-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.email-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 27px;
+}
+
+.btn-subscribe {
+  width: 100%;
+  margin-bottom: 27px;
+}
