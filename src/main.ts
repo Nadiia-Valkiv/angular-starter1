@@ -1,3 +1,5 @@
+/// <reference types="@angular/localize" />
+
 /* eslint-disable no-console */
 import { AppModule } from './app/app.module'
 import { environment } from './environments/environment'

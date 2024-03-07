@@ -6,8 +6,21 @@
     </div>
     <div class="flex-item">
       <input class="email-input" type="email" placeholder="Ваш email" />
-      <button class="btn-black btn btn-subscribe">Підписатись</button>
+      <button class="btn-black btn btn-subscribe" (click)="openBackDropCustomClass(content)">Підписатись</button>
       <p class="agreement-text">Даю згоду на обробку та використання персональних даних</p>
     </div>
   </div>
 </div>
+
+<ng-template #content let-modal class="modal-container">
+  <div class="modal-header">
+    <h4 class="modal-title">Дякуємо</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">Х</button>
+  </div>
+  <div >
+    <p>Ми відправили лист на вашу пошту. Будь ласка, підтвердіть підписку.</p>
+  </div>
+  <div >
+    <button type="button" class="btn-black btn" (click)="modal.close('Close click')">OK</button>
+  </div>
+</ng-template>

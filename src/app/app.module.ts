@@ -14,13 +14,14 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module'
 import { CoreModule } from 'src/app/core/core.module'
 import { ErrorInterceptor } from 'src/app/core/interceptors/error.interceptor'
 
-import { environment } from 'src/environments/environment'
+import { environment } from 'src/environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 registerLocaleData(localeUk)
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CoreModule.forRoot(), BrowserAnimationsModule, AppRoutingModule, HttpClientModule, TranslocoRootModule],
+  imports: [BrowserModule, CoreModule.forRoot(), BrowserAnimationsModule, AppRoutingModule, HttpClientModule, TranslocoRootModule, NgbModule],
   providers: [
     { provide: RECAPTCHA_V3_SITE_KEY, useValue: environment.recaptcha.siteKey },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
