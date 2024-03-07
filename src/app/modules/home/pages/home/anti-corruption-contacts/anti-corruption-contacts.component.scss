@@ -1,7 +1,5 @@
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
 .flex-container {
   display: grid;
@@ -9,27 +7,56 @@
   gap: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .flex-item {
-  max-width: 300px;
-}
+  max-width: 350px;
 
+  h2 {
+    font-size: 36px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+      margin-bottom: unset;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+    }
+  }
+}
 
 .img-wrapper {
   width: 45px;
   height: 45px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
+
+  @include media-breakpoint-down(xs) {
+    margin: 0 0 20px;
+  }
 }
 
 .flex-row {
   display: flex;
 }
 
+.flex-header {
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+}
+
 .contacts-text {
   font-size: 18px;
   font-weight: 400;
+
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
 }
 
 a {
@@ -41,25 +68,24 @@ a {
   font-weight: 400;
   line-height: 29px;
   transition: color 0.3s ease-in-out;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 20px;
+  }
 }
 
 .link-text:hover {
   color: blue;
-  }
-
-
+}
 
 .icon {
   width: 65px;
   height: 65px;
   margin-right: 22px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0.5;
 }
 
 .icon:hover {
   transform: scale(1.1);
-  opacity: 1;
+  opacity: 0.5;
 }
-
-

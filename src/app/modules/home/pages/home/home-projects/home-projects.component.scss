@@ -7,6 +7,10 @@
   gap: 50px;
   margin-top: 50px;
   padding: 50px 135px;
+  @include media-breakpoint-down(md) {
+      padding: 50px 70px;
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .number-of-lists {
@@ -30,13 +34,6 @@
 
   &:not(:last-of-type) {
     margin-bottom: 30px;
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .flex-container {
-    padding: 50px 70px;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
