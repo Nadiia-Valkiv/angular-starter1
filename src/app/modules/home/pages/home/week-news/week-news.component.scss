@@ -2,9 +2,8 @@
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
 .background {
-  background-color: #FFCD4E;
+  background-color: #ffcd4e;
 }
-
 
 .flex-container {
   width: 90%;
@@ -46,5 +45,43 @@ p {
   margin-bottom: 27px;
 }
 
+.modal-title {
+  @include h1;
+}
 
+.btn-close {
+  img {
+    @include media-breakpoint-down(sm) {
+      width: 16px;
+    }
+  }
+}
 
+.sub-content {
+  padding: 0 40px 60px 40px;
+
+  .sub-confirm {
+    p {
+      margin-bottom: unset;
+      font-size: 20px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 60px;
+
+    .ok-btn {
+      width: 192px;
+      height: 64px;
+
+      @include media-breakpoint-down(sm) {
+        width: 184px;
+        height: 48px;
+      }
+    }
+  }
+}

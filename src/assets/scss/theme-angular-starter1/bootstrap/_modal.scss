@@ -6,11 +6,8 @@
   }
 
   &-content {
-    border-radius: 40px;
+    border-radius: 0;
     border: none;
-    @include media-breakpoint-down(sm) {
-      border-radius: 24px;
-    }
   }
 
   &__body {
@@ -123,12 +120,6 @@
 .backdrop-grey.modal-backdrop.fade,
 .backdrop-grey.modal-backdrop.fade.show {
   opacity: 0.7;
-
-  & + ngb-modal-window {
-    .modal-content {
-      background: unset;
-    }
-  }
 }
 
 .backdrop-black.modal-backdrop.fade,

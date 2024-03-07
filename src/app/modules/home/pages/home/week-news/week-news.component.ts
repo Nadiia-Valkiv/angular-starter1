@@ -11,6 +11,6 @@ export class WeekNewsComponent {
   private modalService = inject(NgbModal)
 
   openBackDropCustomClass(content: TemplateRef<any>): void {
-    this.modalService.open(content, { backdropClass: 'light-blue-backdrop' })
+    this.modalService.open(content, { backdropClass: 'backdrop-grey', centered: true })
   }
 }
