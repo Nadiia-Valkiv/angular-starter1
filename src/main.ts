@@ -1,4 +1,4 @@
-/// <reference types="@angular/localize" />
+// / <reference types="@angular/localize" />
 
 /* eslint-disable no-console */
 import { AppModule } from './app/app.module'

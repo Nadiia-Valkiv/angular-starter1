@@ -6,7 +6,6 @@ import { BasePageComponent } from 'src/app/core/abstracts/base-page.component'
 import { LangService } from 'src/app/core/services/lang.service'
 import { SsrService } from 'src/app/core/services/ssr.service'
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

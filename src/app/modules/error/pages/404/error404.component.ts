@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT } from '@angular/common'
 import { Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core'
 
 @Component({
