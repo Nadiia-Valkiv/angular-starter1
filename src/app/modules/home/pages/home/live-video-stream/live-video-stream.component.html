@@ -1,5 +1,5 @@
 <div *ngIf="showVideo; else containerTemplate">
-  <div class="video-wrapper">
+  <div class="video-wrapper" data-aos="fade-up">
     <video id="videoPlayer" (ended)="closeVideo()" autoplay controls>
       <source src="./assets/video/live-presentation.mp4" type="video/mp4" />
     </video>
@@ -7,13 +7,13 @@
 </div>
 
 <ng-template #containerTemplate>
-  <div class="video-bg-container">
-    <div class="info-wrapper">
+  <div class="video-bg-container" data-aos="zoom-in-up" data-aos-duration="3000">
+    <div class="info-wrapper" data-aos="fade-up" data-aos-duration="4000">
       <h1 class="presentation-live-header">Презентація наживо</h1>
       <span class="date">11 березня, o 12:00</span>
     </div>
     <div class="button-wrapper">
-      <button class="video-player-btn" (click)="playVideo()">
+      <button (click)="playVideo()" class="video-player-btn">
         <img src="./assets/img/icons/player-btn.svg" alt="video-player-button" />
       </button>
     </div>

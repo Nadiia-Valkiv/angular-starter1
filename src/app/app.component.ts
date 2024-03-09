@@ -1,3 +1,5 @@
+import AOS from 'aos'
+
 import { AfterViewInit, Component, OnInit } from '@angular/core'
 
 import { AccessibilityService } from 'src/app/core/services/accessibility.service'
@@ -24,6 +26,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.detectLanguage()
     this.accessibilityService.initA11y()
+    AOS.init()
   }
 
   ngAfterViewInit(): void {

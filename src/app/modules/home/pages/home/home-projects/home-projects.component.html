@@ -1,5 +1,5 @@
 <div class="flex-container">
-  <div class="flex-item" *ngFor="let card of newsCards; let i = index">
+  <div class="flex-item" data-aos="flip-left" data-aos-duration="3000" *ngFor="let card of newsCards; let i = index">
     <span class="number-of-lists"> 0{{ i + 1 }} </span>
     <h2 class="first-header">{{ card.date }}</h2>
     <div class="newsItem" *ngFor="let newsOfMonth of card.news">

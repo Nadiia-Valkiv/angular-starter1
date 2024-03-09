@@ -23,6 +23,8 @@
   "dependencies": {
     "@nguniversal/express-engine": "16.1.0",
     "@popperjs/core": "^2.11.6",
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "domino": "^2.1.4",
     "express": "4.18.2"

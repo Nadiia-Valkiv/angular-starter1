@@ -5,7 +5,8 @@
     "types": [
       "node",
       "@angular/localize"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"],
