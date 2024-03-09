@@ -1,10 +1,11 @@
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { delay } from 'rxjs'
 
 import { EmailApiService } from '../../../services/email-api.service'
 import { EmailService } from '../../../services/email.service'
 import { UniqueEmailValidator } from '../../../validators/unique-email-validator'
 
-import { Component, OnInit, TemplateRef } from '@angular/core'
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core'
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
@@ -14,6 +15,11 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class EmailFormComponent implements OnInit {
   emailForm!: FormGroup
+  isSendingRequest = false
+  isSuccess = false
+  isFailed = false
+
+  @ViewChild('content') modalContent: any
 
   constructor(
     private modalService: NgbModal,
@@ -30,7 +36,28 @@ export class EmailFormComponent implements OnInit {
 
   onSubmit(): void {
     if (this.emailForm.valid) {
-      this.emailApiService.subscribeEmailUser(this.emailForm.value).pipe()
+      this.isSendingRequest = true
+      console.log('njnfernjfnejrfnjerkernfknerfknrenkng')
+      this.emailApiService
+        .subscribeEmailUser(this.emailForm.value)
+        .pipe(delay(3000))
+        .subscribe({
+          next: () => {
+            this.isSuccess = true // Show green tick icon on success
+            this.isSendingRequest = false
+            this.emailForm.reset()
+            setTimeout(() => {
+              this.openBackDropCustomClass(this.modalContent)
+            }, 1000)
+          },
+          error: () => {
+            this.isFailed = true
+            this.isSendingRequest = false
+            setTimeout(() => {
+              this.isFailed = false
+            }, 3000)
+          },
+        })
     } else {
       console.log('email not valid')
       console.log(this.emailForm.value)
@@ -38,6 +65,8 @@ export class EmailFormComponent implements OnInit {
   }
 
   openBackDropCustomClass(content: TemplateRef<any>): void {
+    this.isSuccess = false
+    this.isFailed = false
     this.modalService.open(content, { backdropClass: 'backdrop-grey', centered: true })
   }
 }

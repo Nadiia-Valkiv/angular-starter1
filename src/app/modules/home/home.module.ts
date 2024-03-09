@@ -1,10 +1,12 @@
 import { AntiCorruptionContactsComponent } from './pages/home/anti-corruption-contacts/anti-corruption-contacts.component'
+import { EmailFormComponent } from './pages/home/email-form/email-form.component'
 import { HomeProjectsComponent } from './pages/home/home-projects/home-projects.component'
 import { LiveVideoStreamComponent } from './pages/home/live-video-stream/live-video-stream.component'
 import { WeekNewsComponent } from './pages/home/week-news/week-news.component'
 
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { CoreModule } from 'src/app/core/core.module'
 
@@ -13,8 +15,6 @@ import { LayoutModule } from 'src/app/shared/modules/layout/layout.module'
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module'
 import { HomeHeroComponent } from 'src/app/modules/home/pages/home/home-hero/home-hero.component'
 import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
-import { ReactiveFormsModule } from '@angular/forms';
-import { EmailFormComponent } from './pages/home/email-form/email-form.component'
 
 @NgModule({
   declarations: [

@@ -20,7 +20,7 @@ export class EmailApiService {
     return this.sendPostRequest(this.checkUniqueEmailUrl, data)
   }
 
-  private sendPostRequest(data: any, url: string): Observable<any> {
+  private sendPostRequest(url: string, data: any): Observable<any> {
     return this.httpClient.post<any>(url, data)
   }
 }

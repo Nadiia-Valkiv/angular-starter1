@@ -98,12 +98,11 @@ p {
   border-bottom: 2px solid black;
   background-color: transparent;
   outline: none;
-  margin-bottom: 27px;
 }
 
 .btn-subscribe {
   width: 100%;
-  margin-bottom: 27px;
+  margin: 27px 0;
 }
 
 .modal-title {
@@ -150,4 +149,20 @@ p {
       }
     }
   }
+}
+
+.check-icon {
+  color: green;
+  font-size: 24px;
+}
+
+.cross-icon {
+  color: red;
+  font-size: 24px;
+}
+
+.error-text {
+  position: absolute;
+  color: red;
+  font-size: 12px;
 }
