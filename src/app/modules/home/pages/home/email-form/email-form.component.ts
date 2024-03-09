@@ -37,13 +37,12 @@ export class EmailFormComponent implements OnInit {
   onSubmit(): void {
     if (this.emailForm.valid) {
       this.isSendingRequest = true
-      console.log('njnfernjfnejrfnjerkernfknerfknrenkng')
       this.emailApiService
         .subscribeEmailUser(this.emailForm.value)
         .pipe(delay(3000))
         .subscribe({
           next: () => {
-            this.isSuccess = true // Show green tick icon on success
+            this.isSuccess = true
             this.isSendingRequest = false
             this.emailForm.reset()
             setTimeout(() => {
@@ -58,9 +57,6 @@ export class EmailFormComponent implements OnInit {
             }, 3000)
           },
         })
-    } else {
-      console.log('email not valid')
-      console.log(this.emailForm.value)
     }
   }
 
