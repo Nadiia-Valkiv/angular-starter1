@@ -1,6 +1,4 @@
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
-
-import { Component, TemplateRef } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-week-news',
@@ -8,9 +6,4 @@ import { Component, TemplateRef } from '@angular/core'
   styleUrls: ['./week-news.component.scss'],
 })
 export class WeekNewsComponent {
-  constructor(private modalService: NgbModal) {}
-
-  openBackDropCustomClass(content: TemplateRef<any>): void {
-    this.modalService.open(content, { backdropClass: 'backdrop-grey', centered: true })
-  }
 }

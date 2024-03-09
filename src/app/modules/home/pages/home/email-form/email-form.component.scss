@@ -1,0 +1,153 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.background {
+  background-color: #ffcd4e;
+  padding: 80px 250px;
+
+  @include media-breakpoint-down(md) {
+    padding: 40px 100px;
+  }
+
+  @include media-breakpoint-down(tb) {
+    padding: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 60px 20px;
+  }
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 1fr 294px;
+  gap: 30px;
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flex-item {
+  margin: 50px 0;
+
+  @include media-breakpoint-down(sm) {
+    margin: unset;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  h1 {
+    width: 360px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  .email-input,
+  .btn-subscribe {
+    width: 294px;
+  }
+
+  .email-input {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  .agreement-text {
+    width: 258px;
+  }
+
+  .btn-subscribe {
+    height: 64px;
+    font-size: 16px;
+    transition: box-shadow 0.5s ease-in-out;
+
+    @include media-breakpoint-down(sm) {
+      width: 184px;
+      height: 48px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 4px #ffffff;
+    }
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.agreement-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.email-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 27px;
+}
+
+.btn-subscribe {
+  width: 100%;
+  margin-bottom: 27px;
+}
+
+.modal-title {
+  @include h1;
+}
+
+.btn-close {
+  img {
+    @include media-breakpoint-down(sm) {
+      width: 16px;
+    }
+  }
+}
+
+.sub-content {
+  padding: 0 40px 60px 40px;
+
+  .sub-confirm {
+    p {
+      margin-bottom: unset;
+      font-size: 20px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 60px;
+
+    .ok-btn {
+      width: 192px;
+      height: 64px;
+      transition: box-shadow 0.5s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 0 4px #4b4d4d;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 184px;
+        height: 48px;
+      }
+    }
+  }
+}

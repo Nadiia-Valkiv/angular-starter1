@@ -13,6 +13,8 @@ import { LayoutModule } from 'src/app/shared/modules/layout/layout.module'
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module'
 import { HomeHeroComponent } from 'src/app/modules/home/pages/home/home-hero/home-hero.component'
 import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { EmailFormComponent } from './pages/home/email-form/email-form.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
     LiveVideoStreamComponent,
     AntiCorruptionContactsComponent,
     WeekNewsComponent,
+    EmailFormComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule],
+  imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule, ReactiveFormsModule],
 })
 export class HomeModule {}

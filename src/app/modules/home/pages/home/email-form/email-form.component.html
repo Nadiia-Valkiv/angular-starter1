@@ -1,0 +1,23 @@
+<form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+  <input  id="email" formControlName="email" class="email-input" type="email" placeholder="Ваш email" />
+  <button type="submit" [disabled]="!emailForm.valid" class="btn-black btn btn-subscribe" (click)="openBackDropCustomClass(content)">Підписатись</button>
+</form>
+<p class="agreement-text">Даю згоду на обробку та використання персональних даних</p>
+
+<ng-template #content let-modal class="modal-container">
+  <div class="modal-header">
+    <h1 class="modal-title">Дякуємо</h1>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <img src="./assets/img/icons/close-icon.svg" alt="close" />
+    </button>
+  </div>
+  <div class="sub-content">
+    <div class="sub-confirm">
+      <p>Ми відправили лист на вашу пошту.</p>
+      <p>Будь ласка, підтвердіть підписку.</p>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn-black btn ok-btn" (click)="modal.close('Close click')">OK</button>
+    </div>
+  </div>
+</ng-template>
