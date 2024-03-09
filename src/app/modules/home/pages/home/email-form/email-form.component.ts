@@ -49,12 +49,14 @@ export class EmailFormComponent implements OnInit {
               this.openBackDropCustomClass(this.modalContent)
             }, 1000)
           },
-          error: () => {
+          error: (errorResponse) => {
             this.isFailed = true
             this.isSendingRequest = false
+            // eslint-disable-next-line no-console
+            console.log('Error during user subscribe', errorResponse)
             setTimeout(() => {
               this.isFailed = false
-            }, 3000)
+            }, 5000)
           },
         })
     }
@@ -62,7 +64,6 @@ export class EmailFormComponent implements OnInit {
 
   openBackDropCustomClass(content: TemplateRef<any>): void {
     this.isSuccess = false
-    this.isFailed = false
     this.modalService.open(content, { backdropClass: 'backdrop-grey', centered: true })
   }
 }
