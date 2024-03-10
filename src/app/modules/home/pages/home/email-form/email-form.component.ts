@@ -5,7 +5,7 @@ import { EmailApiService } from '../../../services/email-api.service'
 import { EmailService } from '../../../services/email.service'
 import { UniqueEmailValidator } from '../../../validators/unique-email-validator'
 
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core'
+import { Component, ElementRef, OnInit, TemplateRef, ViewChild } from '@angular/core'
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
@@ -19,7 +19,7 @@ export class EmailFormComponent implements OnInit {
   isSuccess = false
   isFailed = false
 
-  @ViewChild('content') modalContent: any
+  @ViewChild('content') modalContent!: ElementRef
 
   constructor(
     private modalService: NgbModal,
@@ -62,7 +62,7 @@ export class EmailFormComponent implements OnInit {
     }
   }
 
-  openBackDropCustomClass(content: TemplateRef<any>): void {
+  openBackDropCustomClass(content: ElementRef): void {
     this.isSuccess = false
     this.modalService.open(content, { backdropClass: 'backdrop-grey', centered: true })
   }

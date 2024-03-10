@@ -1,5 +1,7 @@
 import { Observable } from 'rxjs'
 
+import { EmailRequest } from '../interfaces/emailRequest'
+
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 
@@ -12,15 +14,15 @@ export class EmailApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  subscribeEmailUser(data: any): Observable<any> {
+  subscribeEmailUser(data: EmailRequest): Observable<any> {
     return this.sendPostRequest(this.subscribeUserUrl, data)
   }
 
-  checkUniqueEmail(data: any): Observable<any> {
+  checkUniqueEmail(data: EmailRequest): Observable<any> {
     return this.sendPostRequest(this.checkUniqueEmailUrl, data)
   }
 
-  private sendPostRequest(url: string, data: any): Observable<any> {
-    return this.httpClient.post<any>(url, data)
+  private sendPostRequest(url: string, data: EmailRequest): Observable<any> {
+    return this.httpClient.post<EmailRequest>(url, data)
   }
 }
